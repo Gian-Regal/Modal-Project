@@ -50,3 +50,11 @@ btnCloseModal.addEventListener('click', closeModal);
 
 //* close modal window wen selecting on any area out of the modal box
 overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  console.log(e.key);
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+    console.log('esc has been pressed');
+  }
+});
